@@ -1,93 +1,94 @@
-.project-main-container{
+/* ================== ABOUT SECTION ================== */
+
+.main-container {
     position: relative;
+    background-image: url("../../public/professional-headshot.png");
+    min-height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    position: absolute;
-}
-.container-cms{
-    /* display: flex; */
-    position: relative;
-    height: 30vh;
-    width: 30vw;
-    background-color: #ffffff;
-    margin: 3%;
-    /* padding: 5px; */
-    border-radius: 12%;
-    overflow: hidden;
-    border: 2px solid lightblue;
-    cursor: pointer;
-}
-.clusterimg{
-    height: 100%;
-    width: 100%;
-    border-radius: 5%;
-    object-fit:cover;
-
-    
-}
-.project-overlay{
-     position: absolute;
-    top: 0;
-    left: 0;
-
-    height: 100%;
-    width: 100%;
-
-
-    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
-
-    background: rgba(0, 0, 0, 0.35); 
-    color: #ffffff;
-
-    text-align: center;
-    font-weight: bold;
-
-    transition: 0.3s ease;
-
 }
-.vocImg{
-      height: 100%;
-    width: 100%;
+
+/* Dark overlay for readability */
+.main-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
 }
-.back-btn{
-    position:absolute;
-    top: 10px;
-    left: 10px;
-    color: #ffffff;
+
+.abouticon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
     cursor: pointer;
 }
 
-/* About............................ */
-.main-container{
+.second-container {
     position: relative;
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
+    z-index: 2;
+    margin-bottom: 20px;
 }
-.second-container{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.main-container h1{
-    margin-top: 6%;
+
+
+/* Text styling */
+.main-container h1 {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
     color: #ffffff;
     font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 100%;
 }
-.abouticon{
-    background-color: #ffffff2c;
-    color: #ffffff;
-    height: 100px;
-    width: 75px;
-    text-decoration: dotted;
-    border-radius: 100%;
+
+/* tab */
+@media (min-width: 768px) {
+
+    .main-container h1 {
+        font-size: 22px;
+        max-width: 700px;
+    }
+
+    .abouticon {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+/* lap top */
+@media (min-width: 1024px) {
+
+    .main-container {
+        position: relative;
+        padding: 60px;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    .main-container h1 {
+        font-size: 26px;
+        max-width: 900px;
+    }
+
+    .abouticon {
+        height: 80px;
+        width: 80px;
+    }
 }
