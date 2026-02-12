@@ -1,5 +1,5 @@
 import { IoArrowBack } from "react-icons/io5"
-import "../Projects/project.css"
+import "./Project.css"
 import { useNavigate } from "react-router-dom"
 import professional from "../../public/professional-headshot.png"
 

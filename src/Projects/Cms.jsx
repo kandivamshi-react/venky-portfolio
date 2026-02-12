@@ -1,4 +1,4 @@
-import "../Projects/Project.css"
+import "./Project.css"
 import cluster from "../../public/cluster.jpg"
 import vos from "../../public/vos.jpg"
 import ultify from "../../public/ultify.jpg"
